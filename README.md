@@ -3,7 +3,7 @@
 Northeastern Spring 2022  
 
 ## Project Description
-This is server for [Rentronics](), a team project for Web Development course at Northeastern.
+This is server for [Rentronics](https://rentronics.netlify.app/), a team project for Web Development course at Northeastern.
 
 ## Collaborators
 
