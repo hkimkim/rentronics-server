@@ -23,7 +23,8 @@ const register = async (req, res) => {
 
 const profile = (req, res) => {
     const profile = req.session['profile'];
-
+    req.setTimeout(40000);
+    
     if (profile) {
         res.json(profile);
     } else {

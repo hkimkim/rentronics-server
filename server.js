@@ -27,7 +27,7 @@ const CONNECTION_STRING=process.env.DB_CONNECTION_STRING
 mongoose.connect(CONNECTION_STRING);
 
 app.use(cors({
-  origin: 'https://rentronics.netlify.app',
+  origin: 'http://localhost:3000',
   credentials: true
 }));
 
