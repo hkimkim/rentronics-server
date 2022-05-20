@@ -22,8 +22,6 @@ const register = async (req, res) => {
 }
 
 const profile = (req, res) => {
-    req.setTimeout(10 * 1000);
-
     const profile = req.session['profile'];
 
     if (profile) {
@@ -45,6 +43,7 @@ const login = async (req, res) => {
         return;
     }
 
+    console.log(req.session['profile']);
     res.sendStatus(403)
 }
 
