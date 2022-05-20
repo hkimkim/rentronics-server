@@ -21,8 +21,8 @@ const register = async (req, res) => {
     }
 }
 
-const profile = async (req, res) => {
-    const profile = await req.session['profile'];
+const profile = (req, res) => {
+    const profile = req.session['profile'];
 
     if (profile) {
         res.json(profile);
@@ -39,6 +39,7 @@ const login = async (req, res) => {
         req.session['profile'] = profile;
         res.json(profile);
         req.session.save();
+        console.log( req.session['profile']);
         return;
     }
 
