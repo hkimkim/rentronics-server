@@ -56,4 +56,5 @@ searchController(app);
 app.get('/', (request, response) => {
     response.send("Welcome to Rentronics");
 });
-app.listen(4000)
+
+app.listen(process.env.PORT || 4000);
