@@ -26,10 +26,10 @@ dotenv.config();
 const CONNECTION_STRING=process.env.DB_CONNECTION_STRING
 mongoose.connect(CONNECTION_STRING);
 
-app.use(cors({
-  origin: 'http://localhost:3000',
-  credentials: true
-}));
+// app.use(cors({
+//   origin: 'http://localhost:3000',
+//   credentials: true
+// }));
 
 app.use(session({
   secret: process.env.SESSION_KEY,

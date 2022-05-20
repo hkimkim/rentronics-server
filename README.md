@@ -1,6 +1,6 @@
 # rentronics-server
 
-Northeastern   Spring 2022  
+Northeastern Spring 2022  
 
 ## Project Description
 This is server for [Rentronics](), a team project for Web Development course at Northeastern.
@@ -17,3 +17,4 @@ This is server for [Rentronics](), a team project for Web Development course at 
 - REST API
 - express
 - JavaScript
+- Node.js
