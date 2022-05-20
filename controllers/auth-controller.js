@@ -21,13 +21,12 @@ const register = async (req, res) => {
     }
 }
 
-const profile = (req, res) => {
-    const profile = req.session['profile'];
+const profile = async (req, res) => {
+    const profile = await req.session['profile'];
 
     if (profile) {
         res.json(profile);
     } else {
-        console.log("error");
         res.sendStatus(503);
     }
 }
@@ -43,7 +42,6 @@ const login = async (req, res) => {
         return;
     }
 
-    console.log(req.session['profile']);
     res.sendStatus(403)
 }
 
