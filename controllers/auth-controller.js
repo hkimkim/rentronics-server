@@ -23,12 +23,13 @@ const register = async (req, res) => {
 
 const profile = (req, res) => {
     req.setTimeout(60 * 1000);
-    
+
     const profile = req.session['profile'];
 
     if (profile) {
         res.json(profile);
     } else {
+        console.log("error");
         res.sendStatus(503);
     }
 }
