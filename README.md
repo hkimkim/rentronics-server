@@ -7,9 +7,9 @@ This is server for [Rentronics](), a team project for Web Development course at 
 
 ## Collaborators
 
-[Heekyung Kim](https://github.com/hkimkim)
-[Jinesh Mehta](https://github.com/mehtajinesh)
-[Tomiris Kozhabekkyzy](https://github.com/tomirisk)
+[Jinesh Mehta](https://github.com/mehtajinesh)  
+[Tomiris Kozhabekkyzy](https://github.com/tomirisk)  
+[Heekyung Kim](https://github.com/hkimkim)  
 
 ## Tech Stack  
 - MongoDB
