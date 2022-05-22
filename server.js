@@ -38,6 +38,7 @@ app.use(session({
   cookie: {
     secure: false,
     maxAge: 60000 * 30,
+    domain: 'rentronics.netlify.app',
   },
 }));
 
