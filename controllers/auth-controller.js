@@ -38,10 +38,10 @@ const login = async (req, res) => {
     const profile = await userDao.findUserByCredentials(credentials.email, credentials.password);
     
     if (profile) {
-        console.log(profile);
         req.session['profile'] = profile;
         res.json(profile);
         req.session.save();
+        console.log(req.session['profile'])
         return;
     }
 
