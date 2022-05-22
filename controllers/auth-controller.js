@@ -21,6 +21,20 @@ const register = async (req, res) => {
     }
 }
 
+const login = async (req, res) => {
+    const credentials = req.body;
+    const profile = await userDao.findUserByCredentials(credentials.email, credentials.password);
+    
+    if (profile) {
+        req.session['profile'] = profile;
+        res.json(profile);
+        req.session.save();
+        return;
+    }
+
+    res.sendStatus(403)
+}
+
 const profile = (req, res) => {
     console.log('profile');
     console.log(req.session['profile']);
@@ -31,21 +45,6 @@ const profile = (req, res) => {
     } else {
         res.sendStatus(503);
     }
-}
-
-const login = async (req, res) => {
-    const credentials = req.body;
-    const profile = await userDao.findUserByCredentials(credentials.email, credentials.password);
-    
-    if (profile) {
-        req.session['profile'] = profile;
-        res.json(profile);
-        req.session.save();
-        console.log(req.session['profile'])
-        return;
-    }
-
-    res.sendStatus(403)
 }
 
 const logout = (req, res) => {
